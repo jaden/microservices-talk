@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Microservices - A Fusion Alliance AppDev Talk</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style>
+			img.limit-height {
+				max-height: 50vh;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					# Microservices
+
+					3 March 2017
+
+					Dan Hersam
+
+					Note:
+					I'm not an expert, just read a few books and this is what I learned.
+				</section>
+
+				<section data-markdown>
+					## But first, a short interlude...
+				</section>
+
+				<section data-markdown>
+					![](images/GM_Gartner_Hype_Cycle.png)
+
+					Note:
+						Gives a view of how a technology or application will evolve over time.
+						Technology Trigger
+						Peak of Inflated Expectations
+						Trough of Disillusionment
+						Slope of Enlightenment
+						Plateau of Productivity
+				</section>
+
+				<section data-markdown>
+					## Google Trends of Microservices
+
+					![](images/google-trends-microservices.png)
+				</section>
+
+				<section>
+					<img src="images/hype-strong.png" class="limit-height">
+				</section>
+
+				<section data-markdown>
+					## What Are Microservices?
+				</section>
+
+				<section data-markdown>
+					> Microservices are small, autonomous services that work together.
+
+ 					-- Sam Newman, Thoughtworks
+				</section>
+
+				<section data-markdown>
+					> Loosely coupled service-oriented architecture with bounded contexts.
+
+					-- Adrian Cockcroft, Battery Ventures
+				</section>
+
+				<section data-markdown>
+					> An independently deployable component of bounded scope that supports interoperability through message-based communication.
+
+					-- Irakli Nadareishvili
+				</section>
+
+				<section data-markdown>
+					## How To Recognize One in the Wild
+
+					![](images/in_the_wild.gif)
+
+				</section>
+
+				<section data-markdown>
+					## Does One Thing Well
+
+					(Single Responsibility Principle)
+
+					Note:
+					Small and Focused
+				</section>
+
+				<section data-markdown>
+					## Autonomous
+
+					Note:
+					Must be decoupled from other services and isolated
+					Golden rule: can you make a change to a service and deploy it by itself without changing anything else?
+				</section>
+
+				<section data-markdown>
+					## Elastic and Resilient
+
+					Note:
+					Scale appropriately depending on the usage
+					Fault-tolerant and provide a reasonable recovery timeframe if something goes wrong.
+				</section>
+
+				<section data-markdown>
+					![](images/microservice-architecture.png)
+				</section>
+
+				<section data-markdown>
+					## Compared to a Monolith...
+				</section>
+
+				<section data-markdown>
+					![](images/micro-vs-mono.png)
+				</section>
+
+				<section data-markdown>
+					## Why Use Microservices?
+				</section>
+
+				<section data-markdown>
+					### Common Problems
+
+					* Code complexity and maintainability
+					* Deployment as a bottleneck
+					* Fear to change
+					* Lack of ownership
+					* Tightly-coupled dependencies
+					* One size doesn't fit all
+					* Hard to scale out
+
+					Note:
+					Go through each one to explain a little about it (on this slide)
+				</section>
+
+				<section data-markdown>
+					## Key Benefits
+
+					* Increased Development Speed
+					* Mixed Technology
+					* Resilience
+					* Scaling
+					* Ease of Deployment
+					* Composable
+					* Organizational Alignment
+				</section>
+
+				<section data-markdown>
+					## Increased Development Speed
+
+					![](images/faster.gif)
+				</section>
+
+				<section>
+					<h2>Mixed Technology</h2>
+
+					<img src="images/supercomputer_cyoa_large.jpeg" class="limit-height">
+
+					<aside class="notes">
+					Easy to try out the latest technologies with reduced negative impact on the rest of the system
+					</aside>
+				</section>
+
+				<section>
+					<h2>Resilience</h2>
+
+					<img src="images/christmas-lights.jpg" class="limit-height">
+
+					<aside class="notes">
+						Insulates individual services from one another
+					</aside>
+				</section>
+
+			  <section data-markdown>
+					## Scaling
+
+					![](images/monster-tricycle.jpg)
+				</section>
+
+			  <section data-markdown>
+					## Ease of Deployment
+
+					![](images/indy-deployment.gif)
+				</section>
+
+			  <section data-markdown>
+					## Composable
+
+					![](images/legos-legot.jpg)
+				</section>
+
+				<section data-markdown>
+					## Organizational Alignment
+
+					![](images/Too_Many_Cooks.png)
+
+					Note:
+					Reduce the number of people working on a single codebase
+				</section>
+
+				<section>
+					<h2>...The Two Pizza Rule</h2>
+
+					<img src="images/two-pizzas.jpg" class="limit-height">
+
+					<aside class="notes">
+						How to size teams? (Often credited to Jeff Bezos) If a team can't be fed by two pizzas, it's too big.
+						Seems odd to make teams based on how much they can eat, but it's a start.
+					</aside>
+				</section>
+
+				<section data-markdown>
+					## Ready For Production?
+
+					* Netflix
+					* Amazon
+					* Spotify
+					* SoundCloud
+					* Uber
+
+				</section>
+
+				<section data-markdown>
+					# BUT...
+				</section>
+
+				<section data-markdown>
+				  ## Not A Silver Bullet
+
+			  </section>
+
+			  <section>
+			  	<!-- For some reason the list turns into a code block with markdown -->
+			    <h2>New Concerns</h2>
+
+					<ul>
+						<li>Authentication</li>
+				    <li>Message Routing</li>
+				    <li>Network Delays</li>
+				    <li>API Management</li>
+				    <li>Service Discovery</li>
+				    <li>Debugging</li>
+				    <li>Defining Boundaries</li>
+				    <li>Decentralization</li>
+					</ul>
+
+					<aside class="notes">
+						Generally, increased operational complexity, eventual consistency
+						Developers must implement the interservice communication mechanism.
+
+						Implementing use cases that span multiple services without using distributed transactions is difficult
+
+						Implementing use cases that span multiple services requires careful coordination between the teams
+					</aside>
+			  </section>
+
+			  <section data-markdown>
+					## What About SOA?
+
+					Note:
+					Service Oriented Architecture at its heart is a very sensible idea - modularity and message-based communication. However much of the conventional wisdom around SOA doesn’t help you understand how to split something big into something small.
+				</section>
+
+				<section data-markdown>
+					## What About Decomposition?
+
+					* Requires Same Technology
+					* Lose Scaling Independently
+					* Lose Independent Deployment
+					* Less Resiliency
+
+					Note:
+					E.g. Modules or Shared Libraries
+					Many of the advantages of a microservice-based architecture come from its granular nature and the fact that it gives you many more choices for solving problems. Can similar decompositional techniques achieve the same benefits?
+					Technically, it should be possible to create well-factored, independent modules within a single monolithic process. And yet this rarely happens. The modules themselves soon become tightly coupled with the rest of the code, surrendering one of their key benefits. Having a process boundary separation does enforce clean hygiene in this respect (or at least makes it harder to do the wrong thing)
+				</section>
+
+			  <section data-markdown>
+					## Should You Start Using Microservices?
+
+				</section>
+
+				<section data-markdown>
+					## Conway's Law
+
+					> Any organization that designs a system will produce a design whose structure is a copy of the organization's communication structure.
+
+					-- Mel Conway
+
+				</section>
+
+				<section data-markdown>
+				  ## Questions to Ask
+
+				  * How are responsibilities divided between teams?
+				  * How are development and operations divided?
+				  * How big are the teams?
+				  * What skills do they have?
+				  * How is power distributed between the teams?
+				</section>
+
+				<section data-markdown>
+					## Other Considerations...
+				</section>
+
+				<section data-markdown>
+					## Sufficiently Large Project
+
+					Note:
+					Microservices are ideal for big systems
+					Warrants complexity of microservices (they don't come for free)
+					Large, distributed team
+				</section>
+
+				<section data-markdown>
+					## Focused on replaceability
+
+					Note:
+					Microservices can allow you to be more flexible and swap out components that aren't working well
+				</section>
+
+				<section data-markdown>
+					## Deep Understanding of Problem Domain
+
+					Note:
+					One needs to know the problem domain very well before being able to correctly break it down into subdomains small
+enough constitute functionalities for microservices.
+				</section>
+
+				<section data-markdown>
+					## Second Version of Existing System
+
+					Note:
+					Ideal scenario
+				</section>
+
+				<section data-markdown>
+					## How To Introduce Change?
+
+					> Find small changes that can unfold in a way that creates large
+					>	effects
+
+					-- Gareth Morgan
+
+					Note:
+					-- Gareth Morgan, author of Images of Organization
+				</section>
+
+				<section data-markdown>
+					## References
+
+					1. Microservice Architecture by Irakli Nadareishvili
+					1. Building Microservices by Sam Newman
+					1. Microservices from Day One by Cloves Carneiro Jr.
+					1. Production-Ready Microservices by Susan J. Fowler
+					1. Microservices on AWS by Matthias Jung (presentation at AWS Summit 2016)
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'none',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
