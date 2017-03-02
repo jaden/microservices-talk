@@ -73,9 +73,9 @@
 				</section>
 
 				<section data-markdown>
-					> Microservices are small, autonomous services that work together.
+					> An independently deployable component of bounded scope that supports interoperability through message-based communication.
 
- 					-- Sam Newman, Thoughtworks
+					-- Irakli Nadareishvili
 				</section>
 
 				<section data-markdown>
@@ -85,9 +85,9 @@
 				</section>
 
 				<section data-markdown>
-					> An independently deployable component of bounded scope that supports interoperability through message-based communication.
+					> Small, autonomous services that work together.
 
-					-- Irakli Nadareishvili
+ 					-- Sam Newman, Thoughtworks
 				</section>
 
 				<section data-markdown>
@@ -103,35 +103,61 @@
 					(Single Responsibility Principle)
 
 					Note:
-					Small and Focused
+					Small and Focused - Specialized. Separate business units
 				</section>
 
 				<section data-markdown>
 					## Autonomous
 
 					Note:
-					Must be decoupled from other services and isolated
+					Must be decoupled from other services and isolated - decentralized, Replaceability
 					Golden rule: can you make a change to a service and deploy it by itself without changing anything else?
 				</section>
 
 				<section data-markdown>
-					## Elastic and Resilient
+					## Elastic
 
 					Note:
 					Scale appropriately depending on the usage
+				</section>
+
+				<section data-markdown>
+					## Resilient
+
+					Note:
 					Fault-tolerant and provide a reasonable recovery timeframe if something goes wrong.
 				</section>
 
 				<section data-markdown>
-					![](images/microservice-architecture.png)
+					## Decentralized
+
+					Note:
+					Data too - no need for one massive database
 				</section>
 
 				<section data-markdown>
-					## Compared to a Monolith...
+					## Microservices
+
+					![](images/roundabout.jpg)
+
+					Note:
+					Separate business units. Startup, one employee = many hats.
 				</section>
 
 				<section data-markdown>
-					![](images/micro-vs-mono.png)
+					## ... vs a Monolith
+
+					![](images/train.jpg)
+
+					Note:
+					Large company = employees = one job. Don't know how the tracks fit the analogy
+				</section>
+
+				<section data-markdown>
+					## Best Practices?
+
+					Still Evolving...
+
 				</section>
 
 				<section data-markdown>
@@ -139,46 +165,40 @@
 				</section>
 
 				<section data-markdown>
-					### Common Problems
+					## Common Problems with Monoliths
 
-					* Code complexity and maintainability
-					* Deployment as a bottleneck
+					* Technical debt
 					* Fear to change
+					* Tightly-coupled
 					* Lack of ownership
-					* Tightly-coupled dependencies
-					* One size doesn't fit all
 					* Hard to scale out
+					* All or nothing deployment
+					* Code complexity and maintainability
 
 					Note:
-					Go through each one to explain a little about it (on this slide)
+					Explain each one on this slide
 				</section>
 
 				<section data-markdown>
-					## Key Benefits
+					## Key Benefits of Microservices
 
-					* Increased Development Speed
-					* Mixed Technology
-					* Resilience
 					* Scaling
-					* Ease of Deployment
+					* Resilience
 					* Composable
+					* Evolutionary
+					* Ease of Deployment
+					* Choose Your Technology
 					* Organizational Alignment
+					* Increased Development Speed
+
+					Note:
+					Briefly - following slides in more detail
 				</section>
 
-				<section data-markdown>
-					## Increased Development Speed
+			  <section data-markdown>
+					## Scaling
 
-					![](images/faster.gif)
-				</section>
-
-				<section>
-					<h2>Mixed Technology</h2>
-
-					<img src="images/supercomputer_cyoa_large.jpeg" class="limit-height">
-
-					<aside class="notes">
-					Easy to try out the latest technologies with reduced negative impact on the rest of the system
-					</aside>
+					![](images/monster-tricycle.jpg)
 				</section>
 
 				<section>
@@ -192,9 +212,18 @@
 				</section>
 
 			  <section data-markdown>
-					## Scaling
+					## Composable
 
-					![](images/monster-tricycle.jpg)
+					![](images/legos-legot.jpg)
+
+					Note:
+					Flexible - put together for different purposes
+				</section>
+
+				<section data-markdown>
+					## Evolutionary
+
+					![](images/evolution.jpg)
 				</section>
 
 			  <section data-markdown>
@@ -203,10 +232,14 @@
 					![](images/indy-deployment.gif)
 				</section>
 
-			  <section data-markdown>
-					## Composable
+				<section>
+					<h2>Choose Your Technology</h2>
 
-					![](images/legos-legot.jpg)
+					<img src="images/supercomputer_cyoa_large.jpeg" class="limit-height">
+
+					<aside class="notes">
+					Right tool for the job, and easy to try out latest technologies
+					</aside>
 				</section>
 
 				<section data-markdown>
@@ -215,7 +248,7 @@
 					![](images/Too_Many_Cooks.png)
 
 					Note:
-					Reduce the number of people working on a single codebase
+					Reduce the number of people working on a single codebase. Great for distributed teams
 				</section>
 
 				<section>
@@ -230,13 +263,19 @@
 				</section>
 
 				<section data-markdown>
+					## Increased Development Speed
+
+					![](images/faster.gif)
+				</section>
+
+				<section data-markdown>
 					## Ready For Production?
 
-					* Netflix
+					* Uber
 					* Amazon
+					* Netflix
 					* Spotify
 					* SoundCloud
-					* Uber
 
 				</section>
 
@@ -251,26 +290,20 @@
 
 			  <section>
 			  	<!-- For some reason the list turns into a code block with markdown -->
-			    <h2>New Concerns</h2>
+			    <h2>New Common Problems</h2>
 
 					<ul>
-						<li>Authentication</li>
+				    <li>Traceability</li>
+				    <li>Network Latency</li>
 				    <li>Message Routing</li>
-				    <li>Network Delays</li>
-				    <li>API Management</li>
 				    <li>Service Discovery</li>
-				    <li>Debugging</li>
-				    <li>Defining Boundaries</li>
-				    <li>Decentralization</li>
+						<li>Operations Overhead</li>
+				    <li>Eventual Consistency</li>
 					</ul>
 
 					<aside class="notes">
-						Generally, increased operational complexity, eventual consistency
+						Authentication, increased operational complexity, eventual consistency
 						Developers must implement the interservice communication mechanism.
-
-						Implementing use cases that span multiple services without using distributed transactions is difficult
-
-						Implementing use cases that span multiple services requires careful coordination between the teams
 					</aside>
 			  </section>
 
@@ -278,7 +311,8 @@
 					## What About SOA?
 
 					Note:
-					Service Oriented Architecture at its heart is a very sensible idea - modularity and message-based communication. However much of the conventional wisdom around SOA doesn’t help you understand how to split something big into something small.
+					Service Oriented Architecture at its heart is a very sensible idea - modularity and message-based communication. However much of the conventional wisdom around SOA doesn’t help you understand how to split something big into something small. SOA - shared domain models, Microservices - distributed.
+					Enterprise Service Bus vs HTTP
 				</section>
 
 				<section data-markdown>
@@ -312,11 +346,10 @@
 				<section data-markdown>
 				  ## Questions to Ask
 
-				  * How are responsibilities divided between teams?
-				  * How are development and operations divided?
 				  * How big are the teams?
 				  * What skills do they have?
-				  * How is power distributed between the teams?
+				  * How are development and operations divided?
+				  * How are responsibilities divided between teams?
 				</section>
 
 				<section data-markdown>
