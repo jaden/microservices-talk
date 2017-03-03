@@ -100,7 +100,7 @@
 					(Single Responsibility Principle)
 
 					Note:
-					Small and Focused - Specialized. Separate business units
+					Small and Focused - Specialized. Like updateCustomer, or calculatePrice
 				</section>
 
 				<section data-markdown>
@@ -138,7 +138,7 @@
 					![](images/roundabout.jpg)
 
 					Note:
-					Separate business units. Startup, one employee = many hats.
+					Separate business units. Large company = employees = one job.
 				</section>
 
 				<section data-markdown>
@@ -147,13 +147,20 @@
 					![](images/train.jpg)
 
 					Note:
-					Large company = employees = one job. Don't know how the tracks fit the analogy
+					Startup, one employee = many hats. Don't know how the tracks fit the analogy
 				</section>
 
 				<section data-markdown>
 					## Best Practices?
 
-					Still Evolving...
+					* Data Store for Each Microservice
+					* Keep Code at a Similar Level of Maturity
+					* Do a Separate Build for Each Microservice
+					* Deploy in Containers
+					* Treat Servers as Stateless
+
+					Note:
+					From Netflix's experience. Treat servers as cattle, not pets. Avoid "snowflake" systems in which you depend on individual servers to perform specialized functions.
 
 				</section>
 
@@ -396,6 +403,12 @@
 				</section>
 
 				<section data-markdown>
+					## This Presentation
+
+					[microservices.snapmagic.com](https://microservices.snapmagic.com/)
+				</section>
+
+				<section data-markdown>
 					## References
 
 					1. _Microservice Architecture_ by Irakli Nadareishvili
@@ -406,12 +419,6 @@
 
 					Note:
 				  Microservices on AWS = presentation at AWS Summit 2016. Yes, that Susan Fowler
-				</section>
-
-				<section data-markdown>
-					## This Presentation
-
-					[microservices.snapmagic.com](https://microservices.snapmagic.com/)
 				</section>
 
 				<section data-markdown>
