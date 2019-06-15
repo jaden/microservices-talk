@@ -1,0 +1,59 @@
+﻿5 Minutes on what Microservices are (with examples)
+“The Hype is Strong with this one” (image of star wars)
+Gartner’s Hype Cycle: http://www.gartner.com/technology/research/methodologies/hype-cycle.jsp 
+
+
+Microservice vs Microservice architecture
+
+
+A microservice architecture means that your app is made up of lots of smaller, independent applications capable of running in their own memory space and scaling independently from each other across potentially many separate machines.
+
+
+5 Minutes on the Pros
+Microservice architectures are typically better organized, since each microservice has a very specific job, and is not concerned with the jobs of other components. Decoupled services are also easier to recompose and reconfigure to serve the purposes of different apps (for example, serving both the web clients and public API).
+
+
+They can also have performance advantages depending on how they’re organized because it’s possible to isolate hot services and scale them independent of the rest of the app.
+
+
+Each microservice is relatively small - Easier to understand for a developer
+
+
+Each service can be deployed independently of other services - easier to deploy new versions of services frequently
+
+
+Easier to scale development. It enables you to organize the development effort around multiple teams. Each team owns and is responsible for one or more single service. Each team can develop, deploy and scale their services independently of all of the other teams.
+
+
+Improved fault isolation. For example, if there is a memory leak in one service then only that service will be affected. The other services will continue to handle requests. In comparison, one misbehaving component of a monolithic architecture can bring down the entire system.
+
+
+Eliminates any long-term commitment to a technology stack. When developing a new service you can pick a new technology stack. Similarly, when making major changes to an existing service you can rewrite it using a new technology stack.
+
+
+
+
+
+
+5 Minutes on the Cons
+As you’re building a new microservice architecture, you’re likely to discover lots of cross-cutting concerns that you did not anticipate at design time. A monolithic app could establish shared magic helpers or middleware to handle such cross-cutting concerns without much effort.
+In a microservice architecture, you’ll either need to incur the overhead of separate modules for each cross-cutting concern, or encapsulate cross-cutting concerns in another service layer that all traffic gets routed through.
+Eventually, even monolithic architectures tend to route traffic through an outer service layer for cross-cutting concerns, but with a monolithic architecture, it’s possible to delay the cost of that work until the project is much more mature.
+Microservices are frequently deployed on their own virtual machines or containers, causing a proliferation of VM wrangling work. These tasks are frequently automated with container fleet management tools.
+Developers must implement the inter-service communication mechanism.
+Implementing use cases that span multiple services without using distributed transactions is difficult
+Implementing use cases that span multiple services requires careful coordination between the teams
+
+
+
+
+Resources
+https://martinfowler.com/articles/microservices.html
+https://www.nginx.com/blog/introduction-to-microservices/
+https://en.wikipedia.org/wiki/Microservices
+http://microservices.io/patterns/microservices.html
+https://smartbear.com/learn/api-design/what-are-microservices/
+https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview-microservices
+
+
+Look at ebooks
